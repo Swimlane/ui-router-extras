@@ -226,7 +226,7 @@
       function futureStateProvider_get($injector, $state, $q, $rootScope, $urlRouter, $timeout, $log) {
         function init() {
           $rootScope.$on("$stateNotFound", function futureState_notFound(event, unfoundState, fromState, fromParams) {
-            if (lazyloadInProgress) return;
+            // if (lazyloadInProgress) return;
             //$log.debug("event, unfoundState, fromState, fromParams", event, unfoundState, fromState, fromParams);
 
             var futureState = findFutureState($state, { name: unfoundState.to });
